@@ -79,6 +79,18 @@ class TicketView extends StatelessWidget {
                           Styles.headLineStyle3.copyWith(color: Colors.white),
                     ),
                   ],
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      child: Text(
+                        'New-York',
+                        style:
+                            Styles.headLineStyle4.copyWith(color: Colors.white),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
