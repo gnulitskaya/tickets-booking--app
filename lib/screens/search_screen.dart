@@ -1,5 +1,6 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:booktickets/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -56,6 +57,16 @@ class SearchScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
                   color: const Color(0xFFF4F6FD)),
             ),
+          ),
+          Gap(AppLayout.getHeight(25)),
+          AppIconText(
+            text: 'Departure',
+            icon: Icons.flight_takeoff_rounded,
+          ),
+          Gap(AppLayout.getHeight(15)),
+          AppIconText(
+            text: 'Arrival',
+            icon: Icons.flight_land_rounded,
           ),
         ],
       ),
