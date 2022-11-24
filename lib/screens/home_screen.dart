@@ -1,6 +1,7 @@
 import 'package:booktickets/screens/hotel_screen.dart';
 import 'package:booktickets/screens/ticket_view.dart';
 import 'package:booktickets/utils/app_info_list.dart';
+import 'package:booktickets/widgets/view-all_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -74,25 +75,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(45),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Upcoming Flights',
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        print('dscc');
-                      },
-                      child: Text(
-                        'View all',
-                        style: Styles.textStyle
-                            .copyWith(color: Styles.primaryColor),
-                      ),
-                    ),
-                  ],
-                )
+                const ViewAll(
+                    bigText: 'Upcoming Flights', smallText: 'View all'),
               ],
             ),
           ),
@@ -107,27 +91,8 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Hotels',
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () {
-                    print('dscc');
-                  },
-                  child: Text(
-                    'View all',
-                    style:
-                        Styles.textStyle.copyWith(color: Styles.primaryColor),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
+              child: const ViewAll(bigText: 'Hotels', smallText: 'View all')),
           const Gap(15),
           SingleChildScrollView(
               scrollDirection: Axis.horizontal,

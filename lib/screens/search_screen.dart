@@ -6,6 +6,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:gap/gap.dart';
 
+import '../widgets/view-all_widget.dart';
+
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
 
@@ -84,6 +86,8 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
+          Gap(AppLayout.getHeight(40)),
+          const ViewAll(bigText: 'Upcoming Flights', smallText: 'View all'),
         ],
       ),
     );
