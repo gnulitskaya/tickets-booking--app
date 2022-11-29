@@ -88,7 +88,9 @@ class SearchScreen extends StatelessWidget {
           ),
           Gap(AppLayout.getHeight(40)),
           const ViewAll(bigText: 'Upcoming Flights', smallText: 'View all'),
+          Gap(AppLayout.getHeight(15)),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -109,9 +111,57 @@ class SearchScreen extends StatelessWidget {
                         image: DecorationImage(
                             fit: BoxFit.cover,
                             image: AssetImage('assets/images/sit.jpg'))),
+                  ),
+                  Gap(AppLayout.getHeight(12)),
+                  Text(
+                    '20% discount on the early booking of the flights. Don`t miss.',
+                    style: Styles.headLineStyle2,
                   )
                 ]),
               ),
+              Column(
+                children: [
+                  Container(
+                    width: size.width * 0.44,
+                    height: AppLayout.getHeight(200),
+                    decoration: BoxDecoration(
+                        color: Color(0xFF3AB8B8),
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(18))),
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppLayout.getHeight(15),
+                        horizontal: AppLayout.getWidth(18)),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Discount \nfor survey',
+                            style: Styles.headLineStyle2.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Gap(AppLayout.getHeight(10)),
+                          Text(
+                            'Take the survery about our services and get discount',
+                            style: Styles.headLineStyle2.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18),
+                          ),
+                        ]),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: 18,
+                          color: Color(0xFF189999),
+                        ),
+                        color: Colors.transparent),
+                  )
+                ],
+              )
             ],
           ),
         ],
